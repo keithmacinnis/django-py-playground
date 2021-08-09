@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PyFor Play</title>
+</head>
+<body>
+    <h1>
+    There are {{ activities|length }} activities.
+    <hr>
+    </h1>
+    {% for key , value in activities.items %}
+    <h2>{{ value.title }} </h2>
+    <h3>{{ value.activity }} </h3>
+    <img src="{{value.image}}" heigh=200 width=200>
+    <h3>{{ value.location }} </h3>
+    <p>{{ value.description }} <p>
+    <hr>
+    {% endfor %}
+  
+</body>
+</html>
+
+<!-- MgHp8WCSayhif6ahEiV -->
+<!-- Mghp8Wcsayhif6Aheiv -->

@@ -12,31 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from dotenv import load_dotenv, find_dotenv
 from pathlib import Path
-load_dotenv(find_dotenv())
 # Load ENV vars
-
-# Load Firebase
-ENV_FB_authDomain = os.environ.get('REACT_APP_authDomain')
-ENV_FB_databaseURL = os.environ.get('REACT_APP_databaseURL')
-ENV_FB_apiKey = os.environ.get("REACT_APP_apiKey")
-ENV_FB_projectId = os.environ.get("REACT_APP_projectId")
-ENV_FB_storageBucket = os.environ.get("REACT_APP_storageBucket")
-ENV_FB_messagingSenderId = os.environ.get("REACT_APP_messagingSenderId")
-ENV_FB_appId = os.environ.get("REACT_APP_appId")
-
-print("in settings:")
-
-config={
-    "apiKey": ENV_FB_authDomain,
-    "authDomain": os.getenv('ENV_FB_databaseURL'),
-    # "databaseURL": os.getenv('ENV_FB_apiKey'),
-    # "projectId": os.getenv('ENV_FB_projectId'),
-    # "storageBucket": os.getenv('ENV_FB_storageBucket'),
-    # "messagingSenderId": os.getenv('ENV_FB_messagingSenderId'),
-    # "appId": os.getenv('ENV_FB_appId')
-}
-print(config)
-print(os.environ)
+load_dotenv(find_dotenv())
+# Set FB envs.
+print("in settings")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent 
 
@@ -78,7 +57,7 @@ ROOT_URLCONF = 'forPyPlay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
