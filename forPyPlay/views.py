@@ -1,12 +1,8 @@
-# HttpResponse is used to
-# pass the information 
-# back to view
 from django.http import HttpResponse
 from django.shortcuts import render
 from pprint import pprint
 import pyrebase
 import os
-
 
 ENV_FB_authDomain = os.environ.get('REACT_APP_authDomain')
 ENV_FB_databaseURL = os.environ.get('REACT_APP_databaseURL')
@@ -33,6 +29,4 @@ databaseRef = firebase.database()
 def home (request) :
     activities = databaseRef.child('activities').get().val()
     pprint(activities, sort_dicts=False)
-    # This will return Hello Geeks
-    # string as HttpResponse
     return render(request, 'home.html', {'activities': activities})
