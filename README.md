@@ -1,5 +1,5 @@
 # django-py-playground
-An exerice with django / crud 
+A django / firebase crud app 
 
 ## To Run
 
