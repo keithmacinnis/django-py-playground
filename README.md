@@ -9,7 +9,7 @@ create a free firebase db, add its creditals to a .env file in the folder that h
 
 adjust views.py to read your creditals, eg: os.environ.get('your authdomain variable name, from the .env, here'). 
 
-run ' python3 manage.py runserver '
+run ``` python3 manage.py runserver ```
 
 ## Next Steps for this repo:
 
