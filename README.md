@@ -5,9 +5,9 @@ An incomplete django / firebase crud app
 
 git clone this repo
 
-create a free firebase db, add its creditals to a .env file in the folder that holds your settings.py 
+create a free firebase db, add its creditals to a .env file in the folder that holds the settings.py 
 
-adjust views.py to read your creditals correctly.  os.environ.get('your authdomain variable name from the env file here')
+adjust views.py to read your creditals, eg: os.environ.get('your authdomain variable name, from the .env, here'). 
 
 run ' python3 manage.py runserver '
 
