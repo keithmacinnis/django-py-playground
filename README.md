@@ -3,7 +3,7 @@ An incomplete django / firebase crud app
 
 ## To Run
 
-git clone this repo
+```git clone https://github.com/keithmacinnis/django-py-playground.git```
 
 create a free firebase db, add its creditals to a .env file in the folder that holds the settings.py 
 
